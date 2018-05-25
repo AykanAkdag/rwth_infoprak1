@@ -1,0 +1,88 @@
+\hypertarget{class_list}{}\section{List Class Reference}
+\label{class_list}\index{List@{List}}
+
+
+doubly linked list data structure  
+
+
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}\label{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}} 
+\hyperlink{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}{List} ()
+\begin{DoxyCompactList}\small\item\em constructor with pointer initialisation \end{DoxyCompactList}\item 
+void \hyperlink{class_list_abe1c128f9a438009a7ebe1ff946963cf}{enqueue\+\_\+head} (const \hyperlink{class_student}{Student} \&p\+Data)
+\begin{DoxyCompactList}\small\item\em Enqueue an element at the beginning of the list. \end{DoxyCompactList}\item 
+bool \hyperlink{class_list_addc22172363ef656a20069489a1d003f}{dequeue} (\hyperlink{class_student}{Student} \&p\+Data)
+\begin{DoxyCompactList}\small\item\em Dequeue an element from the end of the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_list_a9cd9aa3b710f2c17acbc41a9c376f337}{print\+\_\+forwards} ()
+\begin{DoxyCompactList}\small\item\em Print content from first to last element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+doubly linked list data structure 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_list_addc22172363ef656a20069489a1d003f}\label{class_list_addc22172363ef656a20069489a1d003f}} 
+\index{List@{List}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!List@{List}}
+\subsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily bool List\+::dequeue (\begin{DoxyParamCaption}\item[{\hyperlink{class_student}{Student} \&}]{p\+Data }\end{DoxyParamCaption})}
+
+
+
+Dequeue an element from the end of the list. 
+
+This is the single linked version.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Data} & The data will be stored here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_abe1c128f9a438009a7ebe1ff946963cf}\label{class_list_abe1c128f9a438009a7ebe1ff946963cf}} 
+\index{List@{List}!enqueue\+\_\+head@{enqueue\+\_\+head}}
+\index{enqueue\+\_\+head@{enqueue\+\_\+head}!List@{List}}
+\subsubsection{\texorpdfstring{enqueue\+\_\+head()}{enqueue\_head()}}
+{\footnotesize\ttfamily void List\+::enqueue\+\_\+head (\begin{DoxyParamCaption}\item[{const \hyperlink{class_student}{Student} \&}]{p\+Data }\end{DoxyParamCaption})}
+
+
+
+Enqueue an element at the beginning of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Data} & The \hyperlink{class_student}{Student} to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_a9cd9aa3b710f2c17acbc41a9c376f337}\label{class_list_a9cd9aa3b710f2c17acbc41a9c376f337}} 
+\index{List@{List}!print\+\_\+forwards@{print\+\_\+forwards}}
+\index{print\+\_\+forwards@{print\+\_\+forwards}!List@{List}}
+\subsubsection{\texorpdfstring{print\+\_\+forwards()}{print\_forwards()}}
+{\footnotesize\ttfamily void List\+::print\+\_\+forwards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print content from first to last element. 
+
+Prints to cout.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_list_8h}{List.\+h}\item 
+\hyperlink{_list_8cpp}{List.\+cpp}\end{DoxyCompactItemize}

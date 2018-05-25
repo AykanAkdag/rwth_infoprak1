@@ -1,0 +1,235 @@
+\hypertarget{class_vektor}{}\section{Vektor Class Reference}
+\label{class_vektor}\index{Vektor@{Vektor}}
+
+
+A vector in R$^\wedge$3.  
+
+
+
+
+{\ttfamily \#include $<$Vektor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vektor_a744b4980d331af082c08890ff2e4a857}\label{class_vektor_a744b4980d331af082c08890ff2e4a857}} 
+\hyperlink{class_vektor_a744b4980d331af082c08890ff2e4a857}{Vektor} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Constructor method for a vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vektor_a66e8e932c4e2df23b5a1d4c4764ce9d2}\label{class_vektor_a66e8e932c4e2df23b5a1d4c4764ce9d2}} 
+\hyperlink{class_vektor_a66e8e932c4e2df23b5a1d4c4764ce9d2}{$\sim$\+Vektor} ()
+\begin{DoxyCompactList}\small\item\em Destructor method for a vector. \end{DoxyCompactList}\item 
+double \hyperlink{class_vektor_ad1864a78b96956dc7f504bba9b39af45}{getX} () const
+\begin{DoxyCompactList}\small\item\em Returning the X coordinate of a vector. \end{DoxyCompactList}\item 
+double \hyperlink{class_vektor_a93d6584667064c7e3abc9d42b529db93}{getY} () const
+\begin{DoxyCompactList}\small\item\em Returning the Y coordinate of a vector. \end{DoxyCompactList}\item 
+double \hyperlink{class_vektor_aaef4681c5b2ce1348685eb4cd89bd9b2}{getZ} () const
+\begin{DoxyCompactList}\small\item\em Returning the Z coordinate of a vector. \end{DoxyCompactList}\item 
+\hyperlink{class_vektor}{Vektor} \hyperlink{class_vektor_a9e095d5d627ad26c7c2d6f227567e731}{sub} (const \hyperlink{class_vektor}{Vektor} \&input) const
+\begin{DoxyCompactList}\small\item\em Subtraction of two vectors. \end{DoxyCompactList}\item 
+\hyperlink{class_vektor}{Vektor} \hyperlink{class_vektor_aeafef3c21fdf2ad7edca844826e111bf}{add} (const \hyperlink{class_vektor}{Vektor} \&input) const
+\begin{DoxyCompactList}\small\item\em Addition of two vectors. \end{DoxyCompactList}\item 
+double \hyperlink{class_vektor_aa17fc7f816fc425482b17fdafc45a4ed}{length} () const
+\begin{DoxyCompactList}\small\item\em Returning the lenght of a vector. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vektor_a4624deedf4290c110ff4cfb756184f39}{ortho} (const \hyperlink{class_vektor}{Vektor} \&input) const
+\begin{DoxyCompactList}\small\item\em Checks if vectors are orthogonal. \end{DoxyCompactList}\item 
+double \hyperlink{class_vektor_ad517a8ae863c578a6d46c924ff3db1d5}{scalar\+Prod} (const \hyperlink{class_vektor}{Vektor} \&input) const
+\begin{DoxyCompactList}\small\item\em Calculates the scalar (dot) product of two vectors. \end{DoxyCompactList}\item 
+double \hyperlink{class_vektor_a33baaca0958a73d60f19500ad59d4288}{angle} (const \hyperlink{class_vektor}{Vektor} \&input) const
+\begin{DoxyCompactList}\small\item\em Calculates the angle between two vectors in deg. \end{DoxyCompactList}\item 
+void \hyperlink{class_vektor_a263858396c9751b803946e86947066e5}{rotate\+AroundZ} (const double rad)
+\begin{DoxyCompactList}\small\item\em Rotates the vector around the Z plane. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vektor_aa3c41759f0a472327a8970878234675a}\label{class_vektor_aa3c41759f0a472327a8970878234675a}} 
+void \hyperlink{class_vektor_aa3c41759f0a472327a8970878234675a}{ausgabe} () const
+\begin{DoxyCompactList}\small\item\em Prints the coordinates of a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A vector in R$^\wedge$3. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vektor_aeafef3c21fdf2ad7edca844826e111bf}\label{class_vektor_aeafef3c21fdf2ad7edca844826e111bf}} 
+\index{Vektor@{Vektor}!add@{add}}
+\index{add@{add}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \hyperlink{class_vektor}{Vektor} Vektor\+::add (\begin{DoxyParamCaption}\item[{const \hyperlink{class_vektor}{Vektor} \&}]{input }\end{DoxyParamCaption}) const}
+
+
+
+Addition of two vectors. 
+
+This method calculates the sum of two given vectors. Let v and w be summands. To calculate v+w this method has to be called in the form\+: v.\+add(w) or w.\+add(v) as addition operation is commutative in the vector space R$^\wedge$3.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The 2nd vector (w) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_vektor}{Vektor} The resulting vector sum 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_a33baaca0958a73d60f19500ad59d4288}\label{class_vektor_a33baaca0958a73d60f19500ad59d4288}} 
+\index{Vektor@{Vektor}!angle@{angle}}
+\index{angle@{angle}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{angle()}{angle()}}
+{\footnotesize\ttfamily double Vektor\+::angle (\begin{DoxyParamCaption}\item[{const \hyperlink{class_vektor}{Vektor} \&}]{input }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the angle between two vectors in deg. 
+
+This method calculates the angle between two input vectors. It uses the fact that the dot product divided by the sum of lenghts of two vectors is the cosine of the angle between them. Then the arccos function provided in the cmath library is applied to get the angle and the radian output is converted into degrees
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The 2nd vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The angle between the vectors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_ad1864a78b96956dc7f504bba9b39af45}\label{class_vektor_ad1864a78b96956dc7f504bba9b39af45}} 
+\index{Vektor@{Vektor}!getX@{getX}}
+\index{getX@{getX}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{get\+X()}{getX()}}
+{\footnotesize\ttfamily double Vektor\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returning the X coordinate of a vector. 
+
+This method returns the numerical value of the x coordinate of a given vector in the Class \hyperlink{class_vektor}{Vektor}
+
+\begin{DoxyReturn}{Returns}
+double Coordinate in the x-\/plane 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_a93d6584667064c7e3abc9d42b529db93}\label{class_vektor_a93d6584667064c7e3abc9d42b529db93}} 
+\index{Vektor@{Vektor}!getY@{getY}}
+\index{getY@{getY}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{get\+Y()}{getY()}}
+{\footnotesize\ttfamily double Vektor\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returning the Y coordinate of a vector. 
+
+This method returns the numerical value of the y coordinate of a given vector in the Class \hyperlink{class_vektor}{Vektor}
+
+\begin{DoxyReturn}{Returns}
+double Coordinate in the y-\/plane 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_aaef4681c5b2ce1348685eb4cd89bd9b2}\label{class_vektor_aaef4681c5b2ce1348685eb4cd89bd9b2}} 
+\index{Vektor@{Vektor}!getZ@{getZ}}
+\index{getZ@{getZ}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{get\+Z()}{getZ()}}
+{\footnotesize\ttfamily double Vektor\+::getZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returning the Z coordinate of a vector. 
+
+This method returns the numerical value of the z coordinate of a given vector in the Class \hyperlink{class_vektor}{Vektor}
+
+\begin{DoxyReturn}{Returns}
+double Coordinate in the z-\/plane 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_aa17fc7f816fc425482b17fdafc45a4ed}\label{class_vektor_aa17fc7f816fc425482b17fdafc45a4ed}} 
+\index{Vektor@{Vektor}!length@{length}}
+\index{length@{length}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily double Vektor\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returning the lenght of a vector. 
+
+This method returns the Euclidean norm of a given vector in the Class \hyperlink{class_vektor}{Vektor}
+
+\begin{DoxyReturn}{Returns}
+double Coordinate in the z-\/plane 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_a4624deedf4290c110ff4cfb756184f39}\label{class_vektor_a4624deedf4290c110ff4cfb756184f39}} 
+\index{Vektor@{Vektor}!ortho@{ortho}}
+\index{ortho@{ortho}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{ortho()}{ortho()}}
+{\footnotesize\ttfamily bool Vektor\+::ortho (\begin{DoxyParamCaption}\item[{const \hyperlink{class_vektor}{Vektor} \&}]{input }\end{DoxyParamCaption}) const}
+
+
+
+Checks if vectors are orthogonal. 
+
+This method checks if the given vectors are orthogonal to one another, that is -\/ is the angle between them = 90 deg? This requires the calculation of the dot product and when it\textquotesingle{}s equal to 0 then the conclusion could be made that the input vectors are orthogonal. As calculations with floating point arithmetic are not 100\% accurate, an E\+P\+S\+I\+L\+ON preprocessor constant is checked as a small tolerance value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The 2nd vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if vectors are orthogonal, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_a263858396c9751b803946e86947066e5}\label{class_vektor_a263858396c9751b803946e86947066e5}} 
+\index{Vektor@{Vektor}!rotate\+AroundZ@{rotate\+AroundZ}}
+\index{rotate\+AroundZ@{rotate\+AroundZ}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{rotate\+Around\+Z()}{rotateAroundZ()}}
+{\footnotesize\ttfamily void Vektor\+::rotate\+AroundZ (\begin{DoxyParamCaption}\item[{const double}]{rad }\end{DoxyParamCaption})}
+
+
+
+Rotates the vector around the Z plane. 
+
+This method multiplies the vector given to it with a rotation matrix about the z plane.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rad} & The angle in radians \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_vektor}{Vektor} Rotated vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_ad517a8ae863c578a6d46c924ff3db1d5}\label{class_vektor_ad517a8ae863c578a6d46c924ff3db1d5}} 
+\index{Vektor@{Vektor}!scalar\+Prod@{scalar\+Prod}}
+\index{scalar\+Prod@{scalar\+Prod}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{scalar\+Prod()}{scalarProd()}}
+{\footnotesize\ttfamily double Vektor\+::scalar\+Prod (\begin{DoxyParamCaption}\item[{const \hyperlink{class_vektor}{Vektor} \&}]{input }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the scalar (dot) product of two vectors. 
+
+This method calculates the dot product of two input vectors. Let v and w be vectors, then v.\+w = v.\+scalar\+Prod(w) = w.\+scalar\+Prod(x) as the product is commutative.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The 2nd vector (w) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The scalar product 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vektor_a9e095d5d627ad26c7c2d6f227567e731}\label{class_vektor_a9e095d5d627ad26c7c2d6f227567e731}} 
+\index{Vektor@{Vektor}!sub@{sub}}
+\index{sub@{sub}!Vektor@{Vektor}}
+\subsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily \hyperlink{class_vektor}{Vektor} Vektor\+::sub (\begin{DoxyParamCaption}\item[{const \hyperlink{class_vektor}{Vektor} \&}]{input }\end{DoxyParamCaption}) const}
+
+
+
+Subtraction of two vectors. 
+
+This method calculates the difference between two given vectors. Let v be the minuend and w the subtraend. To calculate v-\/w this method has to be called in the form\+: v.\+sub(w). Attention! v-\/w != w.\+sub(v) as subtraction is not commutative in the vector space R$^\wedge$3.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The 2nd vector (w) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_vektor}{Vektor} The resulting vector difference 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vektor.\+h\item 
+Vektor.\+cpp\end{DoxyCompactItemize}

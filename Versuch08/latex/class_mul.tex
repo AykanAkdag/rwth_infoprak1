@@ -1,0 +1,107 @@
+\hypertarget{class_mul}{}\section{Mul Class Reference}
+\label{class_mul}\index{Mul@{Mul}}
+
+
+Multiplication expression.  
+
+
+
+
+{\ttfamily \#include $<$mul.\+h$>$}
+
+Inheritance diagram for Mul\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mul}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mul_af8f36e90eda7ce256bd1e93635d55750}{Mul} (\hyperlink{class_expression}{Expression} $\ast$lhs, \hyperlink{class_expression}{Expression} $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em Constructor method for the \hyperlink{class_mul}{Mul} class. \end{DoxyCompactList}\item 
+\hyperlink{class_mul_ad072b4a8fa7c2c7acb794454d3b97c8c}{$\sim$\+Mul} ()
+\begin{DoxyCompactList}\small\item\em Destructor method for the \hyperlink{class_mul}{Mul} class. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_mul_a3e98f760d06aaac61dda9ab57d174a35}{evaluate} () const
+\begin{DoxyCompactList}\small\item\em Multiplies the expressions. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_mul_a0aa9276f2fc04dd9afc77bf47542e5ec}{print} () const
+\begin{DoxyCompactList}\small\item\em Prints out the product. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Multiplication expression. 
+
+This Class serves as a representation of the \char`\"{}$\ast$\char`\"{} operation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mul_af8f36e90eda7ce256bd1e93635d55750}\label{class_mul_af8f36e90eda7ce256bd1e93635d55750}} 
+\index{Mul@{Mul}!Mul@{Mul}}
+\index{Mul@{Mul}!Mul@{Mul}}
+\subsubsection{\texorpdfstring{Mul()}{Mul()}}
+{\footnotesize\ttfamily Mul\+::\+Mul (\begin{DoxyParamCaption}\item[{\hyperlink{class_expression}{Expression} $\ast$}]{lhs,  }\item[{\hyperlink{class_expression}{Expression} $\ast$}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Constructor method for the \hyperlink{class_mul}{Mul} class. 
+
+This constructor makes sure to initialize the left and right operands.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & left hand side \hyperlink{class_expression}{Expression} \\
+\hline
+{\em rhs} & right hand side \hyperlink{class_expression}{Expression} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mul_ad072b4a8fa7c2c7acb794454d3b97c8c}\label{class_mul_ad072b4a8fa7c2c7acb794454d3b97c8c}} 
+\index{Mul@{Mul}!````~Mul@{$\sim$\+Mul}}
+\index{````~Mul@{$\sim$\+Mul}!Mul@{Mul}}
+\subsubsection{\texorpdfstring{$\sim$\+Mul()}{~Mul()}}
+{\footnotesize\ttfamily Mul\+::$\sim$\+Mul (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method for the \hyperlink{class_mul}{Mul} class. 
+
+This destructor deletes the expressions stored in the \hyperlink{class_mul}{Mul} Class and thus frees up the memory. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mul_a3e98f760d06aaac61dda9ab57d174a35}\label{class_mul_a3e98f760d06aaac61dda9ab57d174a35}} 
+\index{Mul@{Mul}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Mul@{Mul}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily double Mul\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Multiplies the expressions. 
+
+This function multiplies the left and the right expressions. They may be simple doubles or long expressions of the \hyperlink{class_expression}{Expression} datatype. This is why evaluation of both operands is needed before the multiplication operation can be performed, as to make sure to complete all the previous operations first.
+
+\begin{DoxyReturn}{Returns}
+The product of the left and the right expressions 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a7437adfabeaeb0500d62d10c43a1f853}{Expression}.
+
+\mbox{\Hypertarget{class_mul_a0aa9276f2fc04dd9afc77bf47542e5ec}\label{class_mul_a0aa9276f2fc04dd9afc77bf47542e5ec}} 
+\index{Mul@{Mul}!print@{print}}
+\index{print@{print}!Mul@{Mul}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Mul\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints out the product. 
+
+This functions outputs the multiplication operation performed in a human readable fashion with brackets and a \char`\"{}$\ast$\char`\"{} symbol. 
+
+Implements \hyperlink{class_expression_a6e05f883ebf77faf344dbaebfc82b3a0}{Expression}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mul_8h}{mul.\+h}\item 
+\hyperlink{mul_8cpp}{mul.\+cpp}\end{DoxyCompactItemize}

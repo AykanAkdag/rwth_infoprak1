@@ -1,0 +1,107 @@
+\hypertarget{class_sub}{}\section{Sub Class Reference}
+\label{class_sub}\index{Sub@{Sub}}
+
+
+Subtraction expression.  
+
+
+
+
+{\ttfamily \#include $<$sub.\+h$>$}
+
+Inheritance diagram for Sub\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sub}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sub_a546d43098de078f66bc615544770133e}{Sub} (\hyperlink{class_expression}{Expression} $\ast$lhs, \hyperlink{class_expression}{Expression} $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em Constructor method for the \hyperlink{class_sub}{Sub} class. \end{DoxyCompactList}\item 
+\hyperlink{class_sub_a01d5069c4d640cc4e6016a4794e435a5}{$\sim$\+Sub} ()
+\begin{DoxyCompactList}\small\item\em Destructor method for the \hyperlink{class_mul}{Mul} class. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_sub_a15b87b081136f533a993a92ac01ec11b}{evaluate} () const
+\begin{DoxyCompactList}\small\item\em Subtracts the expressions. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_sub_a2e7c967c1fdee5e7eca51ca36feb26bc}{print} () const
+\begin{DoxyCompactList}\small\item\em Prints out the difference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Subtraction expression. 
+
+This Class serves as a representation of the \char`\"{}-\/\char`\"{} operation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sub_a546d43098de078f66bc615544770133e}\label{class_sub_a546d43098de078f66bc615544770133e}} 
+\index{Sub@{Sub}!Sub@{Sub}}
+\index{Sub@{Sub}!Sub@{Sub}}
+\subsubsection{\texorpdfstring{Sub()}{Sub()}}
+{\footnotesize\ttfamily Sub\+::\+Sub (\begin{DoxyParamCaption}\item[{\hyperlink{class_expression}{Expression} $\ast$}]{lhs,  }\item[{\hyperlink{class_expression}{Expression} $\ast$}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Constructor method for the \hyperlink{class_sub}{Sub} class. 
+
+This constructor makes sure to initialize the left and right operands.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & left hand side \hyperlink{class_expression}{Expression} \\
+\hline
+{\em rhs} & right hand side \hyperlink{class_expression}{Expression} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sub_a01d5069c4d640cc4e6016a4794e435a5}\label{class_sub_a01d5069c4d640cc4e6016a4794e435a5}} 
+\index{Sub@{Sub}!````~Sub@{$\sim$\+Sub}}
+\index{````~Sub@{$\sim$\+Sub}!Sub@{Sub}}
+\subsubsection{\texorpdfstring{$\sim$\+Sub()}{~Sub()}}
+{\footnotesize\ttfamily Sub\+::$\sim$\+Sub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method for the \hyperlink{class_mul}{Mul} class. 
+
+This destructor deletes the expressions stored in the \hyperlink{class_mul}{Mul} Class and thus frees up the memory. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sub_a15b87b081136f533a993a92ac01ec11b}\label{class_sub_a15b87b081136f533a993a92ac01ec11b}} 
+\index{Sub@{Sub}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Sub@{Sub}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily double Sub\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Subtracts the expressions. 
+
+This function subtracts the right expression from the and the left one. They may be simple doubles or long expressions of the \hyperlink{class_expression}{Expression} datatype. This is why evaluation of both operands is needed before the subtraction operation can be performed, as to make sure to complete all the previous operations first.
+
+\begin{DoxyReturn}{Returns}
+The difference of the left and the right expressions 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a7437adfabeaeb0500d62d10c43a1f853}{Expression}.
+
+\mbox{\Hypertarget{class_sub_a2e7c967c1fdee5e7eca51ca36feb26bc}\label{class_sub_a2e7c967c1fdee5e7eca51ca36feb26bc}} 
+\index{Sub@{Sub}!print@{print}}
+\index{print@{print}!Sub@{Sub}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Sub\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints out the difference. 
+
+This functions outputs the subtraction operation performed in a human readable fashion with brackets and a \char`\"{}-\/\char`\"{} symbol. 
+
+Implements \hyperlink{class_expression_a6e05f883ebf77faf344dbaebfc82b3a0}{Expression}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sub_8h}{sub.\+h}\item 
+\hyperlink{sub_8cpp}{sub.\+cpp}\end{DoxyCompactItemize}

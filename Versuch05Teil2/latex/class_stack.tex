@@ -1,0 +1,64 @@
+\hypertarget{class_stack}{}\section{Stack Class Reference}
+\label{class_stack}\index{Stack@{Stack}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_stack_a1dcd555343970b129f9c1ce97a124d9c}{push} (\hyperlink{class_student}{Student} \&data)
+\begin{DoxyCompactList}\small\item\em Pushes new data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_stack_a4e55c97d719b832e159894421f7b9d3d}{pop} (\hyperlink{class_student}{Student} \&data)
+\begin{DoxyCompactList}\small\item\em Pops the head of the stack. \end{DoxyCompactList}\item 
+void \hyperlink{class_stack_a15f5b63e791731edc265d74ec43c95f1}{ausgabe} () const
+\begin{DoxyCompactList}\small\item\em Outputs the contents of the stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stack_a15f5b63e791731edc265d74ec43c95f1}\label{class_stack_a15f5b63e791731edc265d74ec43c95f1}} 
+\index{Stack@{Stack}!ausgabe@{ausgabe}}
+\index{ausgabe@{ausgabe}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{ausgabe()}{ausgabe()}}
+{\footnotesize\ttfamily void Stack\+::ausgabe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Outputs the contents of the stack. 
+
+This function goes throught the contents of the stack and outputs it. When called, it is first checked whether the stack is empty. If so an message displayed to the user. Otherwise the cursor pointer is iterated over all the elements saved in the stack until the cursor points to N\+U\+LL, which indicates the tail of the list, therefore the output terminates. \mbox{\Hypertarget{class_stack_a4e55c97d719b832e159894421f7b9d3d}\label{class_stack_a4e55c97d719b832e159894421f7b9d3d}} 
+\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily bool Stack\+::pop (\begin{DoxyParamCaption}\item[{\hyperlink{class_student}{Student} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Pops the head of the stack. 
+
+This function pops the uppermost element of the stack (head). When called, it is first checked whether the stack is empty. If so, there are no elements to pop. Otherwise, the head of the stack is saved in the temporary cursor variable and then the head is updated to be the next element pointed by the previous head. After that the cursor variable is deleted thereby completing the task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \hyperlink{class_student}{Student} information \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_stack_a1dcd555343970b129f9c1ce97a124d9c}\label{class_stack_a1dcd555343970b129f9c1ce97a124d9c}} 
+\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void Stack\+::push (\begin{DoxyParamCaption}\item[{\hyperlink{class_student}{Student} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Pushes new data. 
+
+This function pushes a new element on top of the stack. When called, it is first checked whether the stack is empty. If so, a special case condition is needed where the head of the stack is equal to the tail and the only element of the stack is the new element pushed by the user. Otherwise the new element\textquotesingle{}s next pointer is set to the next pointer of the head and the head itself is then updated to be the new element due to the L\+I\+FO structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Input student information \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Stack.\+h\item 
+\hyperlink{_stack_8cpp}{Stack.\+cpp}\end{DoxyCompactItemize}

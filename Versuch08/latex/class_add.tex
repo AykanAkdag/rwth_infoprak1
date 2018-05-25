@@ -1,0 +1,107 @@
+\hypertarget{class_add}{}\section{Add Class Reference}
+\label{class_add}\index{Add@{Add}}
+
+
+Addition expression.  
+
+
+
+
+{\ttfamily \#include $<$add.\+h$>$}
+
+Inheritance diagram for Add\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_add}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_add_aec3988b99721da89e8caa323f37c09f4}{Add} (\hyperlink{class_expression}{Expression} $\ast$lhs, \hyperlink{class_expression}{Expression} $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em Constructor method for the \hyperlink{class_add}{Add} class. \end{DoxyCompactList}\item 
+\hyperlink{class_add_a960ca471ede083983766bce089f9af64}{$\sim$\+Add} ()
+\begin{DoxyCompactList}\small\item\em Destructor method for the \hyperlink{class_add}{Add} class. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_add_ac5b3425e7ac47b9f9a83e2f6da0d81ca}{evaluate} () const
+\begin{DoxyCompactList}\small\item\em Adds the expressions together. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_add_ad5af4ca57a44efab928c58ef39b00df1}{print} () const
+\begin{DoxyCompactList}\small\item\em Prints out the addition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Addition expression. 
+
+This Class serves as a representation of the \char`\"{}+\char`\"{} operation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_add_aec3988b99721da89e8caa323f37c09f4}\label{class_add_aec3988b99721da89e8caa323f37c09f4}} 
+\index{Add@{Add}!Add@{Add}}
+\index{Add@{Add}!Add@{Add}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily Add\+::\+Add (\begin{DoxyParamCaption}\item[{\hyperlink{class_expression}{Expression} $\ast$}]{lhs,  }\item[{\hyperlink{class_expression}{Expression} $\ast$}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Constructor method for the \hyperlink{class_add}{Add} class. 
+
+This constructor makes sure to initialize the left and right operands.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & left hand side \hyperlink{class_expression}{Expression} \\
+\hline
+{\em rhs} & right hand side \hyperlink{class_expression}{Expression} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_add_a960ca471ede083983766bce089f9af64}\label{class_add_a960ca471ede083983766bce089f9af64}} 
+\index{Add@{Add}!````~Add@{$\sim$\+Add}}
+\index{````~Add@{$\sim$\+Add}!Add@{Add}}
+\subsubsection{\texorpdfstring{$\sim$\+Add()}{~Add()}}
+{\footnotesize\ttfamily Add\+::$\sim$\+Add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method for the \hyperlink{class_add}{Add} class. 
+
+This destructor deletes the expressions stored in the \hyperlink{class_add}{Add} Class and thus frees up the memory. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_add_ac5b3425e7ac47b9f9a83e2f6da0d81ca}\label{class_add_ac5b3425e7ac47b9f9a83e2f6da0d81ca}} 
+\index{Add@{Add}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Add@{Add}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily double Add\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds the expressions together. 
+
+This function adds the left and the right expressions together. They may be simple doubles or long expressions of the \hyperlink{class_expression}{Expression} datatype. This is why evaluation of both operands is needed before the addition operation can be performed, as to make sure to complete all the previous operations first.
+
+\begin{DoxyReturn}{Returns}
+The sum of the left and the right expressions 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a7437adfabeaeb0500d62d10c43a1f853}{Expression}.
+
+\mbox{\Hypertarget{class_add_ad5af4ca57a44efab928c58ef39b00df1}\label{class_add_ad5af4ca57a44efab928c58ef39b00df1}} 
+\index{Add@{Add}!print@{print}}
+\index{print@{print}!Add@{Add}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Add\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints out the addition. 
+
+This functions outputs the addition operation performed in a human readable fashion with brackets and a \char`\"{}+\char`\"{} symbol. 
+
+Implements \hyperlink{class_expression_a6e05f883ebf77faf344dbaebfc82b3a0}{Expression}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{add_8h}{add.\+h}\item 
+\hyperlink{add_8cpp}{add.\+cpp}\end{DoxyCompactItemize}

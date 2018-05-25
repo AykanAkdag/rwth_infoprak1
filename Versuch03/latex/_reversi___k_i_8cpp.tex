@@ -1,0 +1,108 @@
+\hypertarget{_reversi___k_i_8cpp}{}\section{Reversi\+\_\+\+K\+I.\+cpp File Reference}
+\label{_reversi___k_i_8cpp}\index{Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}}
+{\ttfamily \#include \char`\"{}Reversi\+\_\+\+K\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_reversi___k_i_8cpp_abc856bca74fb081e1a6703227217f64d}{possible\+\_\+turns} (const int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]}, const int player)
+\begin{DoxyCompactList}\small\item\em Counts the number of possible turns. \end{DoxyCompactList}\item 
+void \hyperlink{_reversi___k_i_8cpp_a2495c6f2402435b226c6f06785e7d091}{execute\+\_\+turn} (int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]}, const int player, const int pos\+\_\+x, const int pos\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Executes players move. \end{DoxyCompactList}\item 
+bool \hyperlink{_reversi___k_i_8cpp_afbf34a9e8028eb4911abf42d6dee0dea}{turn\+\_\+valid} (const int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]}, const int player, const int pos\+\_\+x, const int pos\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Checks the coordinates for validilty of a new move. \end{DoxyCompactList}\item 
+bool \hyperlink{_reversi___k_i_8cpp_a2493087dfe8f9e58555eb20a03d941d6}{computer\+\_\+turn} (int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]}, const int player)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides a KI for the game Reversi. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_reversi___k_i_8cpp_a2493087dfe8f9e58555eb20a03d941d6}\label{_reversi___k_i_8cpp_a2493087dfe8f9e58555eb20a03d941d6}} 
+\index{Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}!computer\+\_\+turn@{computer\+\_\+turn}}
+\index{computer\+\_\+turn@{computer\+\_\+turn}!Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}}
+\subsubsection{\texorpdfstring{computer\+\_\+turn()}{computer\_turn()}}
+{\footnotesize\ttfamily bool computer\+\_\+turn (\begin{DoxyParamCaption}\item[{int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]},  }\item[{const int}]{player }\end{DoxyParamCaption})}
+
+A function which provides a KI for the game Reversi
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The field on which the KI is going to play. \\
+\hline
+{\em player} & The player number of the KI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a turn was executed. False if no turn is possible. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_reversi___k_i_8cpp_a2495c6f2402435b226c6f06785e7d091}\label{_reversi___k_i_8cpp_a2495c6f2402435b226c6f06785e7d091}} 
+\index{Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}!execute\+\_\+turn@{execute\+\_\+turn}}
+\index{execute\+\_\+turn@{execute\+\_\+turn}!Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}}
+\subsubsection{\texorpdfstring{execute\+\_\+turn()}{execute\_turn()}}
+{\footnotesize\ttfamily void execute\+\_\+turn (\begin{DoxyParamCaption}\item[{int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]},  }\item[{const int}]{player,  }\item[{const int}]{pos\+\_\+x,  }\item[{const int}]{pos\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Executes players move. 
+
+This function gets the current state of the game field and the information about an execution of a turn. It behaves similar to the turn\+\_\+valid function in that it looks for the opponent stones in neighbouring fields on lines that are terminated by the player\textquotesingle{}s own stones. The loop is then run backwards to replace all the stones with player\textquotesingle{}s ones. This updated game field could then be read by any other function to play the game further.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The current state of the game field \\
+\hline
+{\em player} & Player who makes the move, 1 for P1, 2 for P2 \\
+\hline
+{\em pos\+\_\+x} & The X coordinate the player has selected \\
+\hline
+{\em pos\+\_\+y} & The Y coordinate the player has selected \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_reversi___k_i_8cpp_abc856bca74fb081e1a6703227217f64d}\label{_reversi___k_i_8cpp_abc856bca74fb081e1a6703227217f64d}} 
+\index{Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}!possible\+\_\+turns@{possible\+\_\+turns}}
+\index{possible\+\_\+turns@{possible\+\_\+turns}!Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}}
+\subsubsection{\texorpdfstring{possible\+\_\+turns()}{possible\_turns()}}
+{\footnotesize\ttfamily int possible\+\_\+turns (\begin{DoxyParamCaption}\item[{const int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]},  }\item[{const int}]{player }\end{DoxyParamCaption})}
+
+
+
+Counts the number of possible turns. 
+
+This function gets the current state of the game field and the player whose turn it is to make a move, then it calculates the total amount of possible moves that player could eventually make given the positions of the stones in the field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The current state of the game field \\
+\hline
+{\em player} & Player who is going to make the move, 1 for P1, 2 for P2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_reversi___k_i_8cpp_afbf34a9e8028eb4911abf42d6dee0dea}\label{_reversi___k_i_8cpp_afbf34a9e8028eb4911abf42d6dee0dea}} 
+\index{Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}!turn\+\_\+valid@{turn\+\_\+valid}}
+\index{turn\+\_\+valid@{turn\+\_\+valid}!Reversi\+\_\+\+K\+I.\+cpp@{Reversi\+\_\+\+K\+I.\+cpp}}
+\subsubsection{\texorpdfstring{turn\+\_\+valid()}{turn\_valid()}}
+{\footnotesize\ttfamily bool turn\+\_\+valid (\begin{DoxyParamCaption}\item[{const int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]},  }\item[{const int}]{player,  }\item[{const int}]{pos\+\_\+x,  }\item[{const int}]{pos\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Checks the coordinates for validilty of a new move. 
+
+This function gets the current state of the playing field together with the information on which player\textquotesingle{}s turn it is and which coordinates they have selected to put their stone on. Thereafter, those coordinates are checked if the field is valid for the given turn. This is implemented in a way that, first of all, the coordinates are checked whether or not they are occupied and then the neighbouring fields are iteratively gone through and checked for an opponent stone. In case an opponent stone is found, the whole row/column/diagonal in the direction of the found opponent stone is gone through, until a stone is found beloning to the player. IF A\+ND O\+N\+LY IF these two conditions are fulfilled the selected coordinates are flagged as valid and the function returns a positive result.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The current state of the game field \\
+\hline
+{\em player} & Player whose turn it is to make a move, 1 for P1, 2 for P2 \\
+\hline
+{\em pos\+\_\+x} & The X coordinate the player has selected \\
+\hline
+{\em pos\+\_\+y} & The Y coordinate the player has selected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if the turn is not valid, T\+R\+UE if the turn is valid 
+\end{DoxyReturn}

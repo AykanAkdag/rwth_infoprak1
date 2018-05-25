@@ -1,0 +1,146 @@
+\hypertarget{class_list}{}\section{List Class Reference}
+\label{class_list}\index{List@{List}}
+
+
+doubly linked list data structure  
+
+
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}\label{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}} 
+\hyperlink{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}{List} ()
+\begin{DoxyCompactList}\small\item\em constructor with pointer initialisation \end{DoxyCompactList}\item 
+void \hyperlink{class_list_abe1c128f9a438009a7ebe1ff946963cf}{enqueue\+\_\+head} (const \hyperlink{class_student}{Student} \&p\+Data)
+\begin{DoxyCompactList}\small\item\em Enqueue an element at the beginning of the list (head). \end{DoxyCompactList}\item 
+bool \hyperlink{class_list_addc22172363ef656a20069489a1d003f}{dequeue} (\hyperlink{class_student}{Student} \&p\+Data)
+\begin{DoxyCompactList}\small\item\em Dequeue an element from the end of the list (tail). \end{DoxyCompactList}\item 
+void \hyperlink{class_list_a9cd9aa3b710f2c17acbc41a9c376f337}{print\+\_\+forwards} ()
+\begin{DoxyCompactList}\small\item\em Print content from first to last element. \end{DoxyCompactList}\item 
+void \hyperlink{class_list_aeff87699c50ed381ba1e765d372ad54b}{print\+\_\+backwards} ()
+\begin{DoxyCompactList}\small\item\em Print content from last to first element. \end{DoxyCompactList}\item 
+bool \hyperlink{class_list_a37928cff7cfcab52b6f86b06b2c58cd1}{delete\+\_\+element} (const unsigned int search\+Mat\+Nr, \hyperlink{class_student}{Student} \&del\+Elem)
+\begin{DoxyCompactList}\small\item\em Deletes the desired element. \end{DoxyCompactList}\item 
+void \hyperlink{class_list_a8d121a27df3b8984d0ac7edc87d14af5}{enqueue\+\_\+tail} (const \hyperlink{class_student}{Student} \&p\+Data)
+\begin{DoxyCompactList}\small\item\em Enqueue an element at the end of the list (tail). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+doubly linked list data structure 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_list_a37928cff7cfcab52b6f86b06b2c58cd1}\label{class_list_a37928cff7cfcab52b6f86b06b2c58cd1}} 
+\index{List@{List}!delete\+\_\+element@{delete\+\_\+element}}
+\index{delete\+\_\+element@{delete\+\_\+element}!List@{List}}
+\subsubsection{\texorpdfstring{delete\+\_\+element()}{delete\_element()}}
+{\footnotesize\ttfamily bool List\+::delete\+\_\+element (\begin{DoxyParamCaption}\item[{const unsigned int}]{search\+Mat\+Nr,  }\item[{\hyperlink{class_student}{Student} \&}]{del\+Elem }\end{DoxyParamCaption})}
+
+
+
+Deletes the desired element. 
+
+This function deletes an element of the list specified by the user. This is done via search by Mat\+Nr. If the list contains the given student with that Mat\+Nr, his/her data is saved to be displayed to the user. If the element was the head (tail) of the list, the new head (tail) should be the next (prev) element of the previous head (tail) and the prev (next) pointer of the next (prev) element must be set to be the prev (next) pointer of the deleted element. In the general case of the deleted element being somehwere in the middle of the list the next and prev pointers are reset accordingly to retain links.
+
+\begin{DoxyReturn}{Returns}
+bool True if element found and deleted False if not found or list empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_addc22172363ef656a20069489a1d003f}\label{class_list_addc22172363ef656a20069489a1d003f}} 
+\index{List@{List}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!List@{List}}
+\subsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily bool List\+::dequeue (\begin{DoxyParamCaption}\item[{\hyperlink{class_student}{Student} \&}]{p\+Data }\end{DoxyParamCaption})}
+
+
+
+Dequeue an element from the end of the list (tail). 
+
+This function deletes the first element in the list, as it is implemented as a queue (F\+I\+FO Structure). If the list is not empty\+: 1) A temporary cursor is set to point to tail. 2) Data is retrieved from the tail to show to the user which element is being deleted. 3) tail is changed to be the previous element of the current tail. 4) The next element of the new tail is set to N\+U\+LL. 5) Cursor, still pointing to the old tail, is deleted together with its data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Data} & The data will be stored here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_abe1c128f9a438009a7ebe1ff946963cf}\label{class_list_abe1c128f9a438009a7ebe1ff946963cf}} 
+\index{List@{List}!enqueue\+\_\+head@{enqueue\+\_\+head}}
+\index{enqueue\+\_\+head@{enqueue\+\_\+head}!List@{List}}
+\subsubsection{\texorpdfstring{enqueue\+\_\+head()}{enqueue\_head()}}
+{\footnotesize\ttfamily void List\+::enqueue\+\_\+head (\begin{DoxyParamCaption}\item[{const \hyperlink{class_student}{Student} \&}]{p\+Data }\end{DoxyParamCaption})}
+
+
+
+Enqueue an element at the beginning of the list (head). 
+
+This function gets a new element given by the user and enques it at the beginning of the list (head). If the list is not empty\+: 1) The head element\textquotesingle{}s prev pointer is set to the address of the new element. 2) The new element\textquotesingle{}s next pointer is set to the head of the list. 3) The head pointer itself is changed to the new element, as now that is the new beginning of the queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Data} & The \hyperlink{class_student}{Student} to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_a8d121a27df3b8984d0ac7edc87d14af5}\label{class_list_a8d121a27df3b8984d0ac7edc87d14af5}} 
+\index{List@{List}!enqueue\+\_\+tail@{enqueue\+\_\+tail}}
+\index{enqueue\+\_\+tail@{enqueue\+\_\+tail}!List@{List}}
+\subsubsection{\texorpdfstring{enqueue\+\_\+tail()}{enqueue\_tail()}}
+{\footnotesize\ttfamily void List\+::enqueue\+\_\+tail (\begin{DoxyParamCaption}\item[{const \hyperlink{class_student}{Student} \&}]{p\+Data }\end{DoxyParamCaption})}
+
+
+
+Enqueue an element at the end of the list (tail). 
+
+This function gets a new element given by the user and enques it at the end of the list (tail). If the list is not empty\+: 1) The tail element\textquotesingle{}s next pointer is set to the address of the new element. 2) The new element\textquotesingle{}s prev pointer is set to the tail of the list. 3) The tail pointer itself is changed to the new element, as now that is the new end of the queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Data} & The \hyperlink{class_student}{Student} to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_aeff87699c50ed381ba1e765d372ad54b}\label{class_list_aeff87699c50ed381ba1e765d372ad54b}} 
+\index{List@{List}!print\+\_\+backwards@{print\+\_\+backwards}}
+\index{print\+\_\+backwards@{print\+\_\+backwards}!List@{List}}
+\subsubsection{\texorpdfstring{print\+\_\+backwards()}{print\_backwards()}}
+{\footnotesize\ttfamily void List\+::print\+\_\+backwards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print content from last to first element. 
+
+Prints to cout.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_a9cd9aa3b710f2c17acbc41a9c376f337}\label{class_list_a9cd9aa3b710f2c17acbc41a9c376f337}} 
+\index{List@{List}!print\+\_\+forwards@{print\+\_\+forwards}}
+\index{print\+\_\+forwards@{print\+\_\+forwards}!List@{List}}
+\subsubsection{\texorpdfstring{print\+\_\+forwards()}{print\_forwards()}}
+{\footnotesize\ttfamily void List\+::print\+\_\+forwards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print content from first to last element. 
+
+Prints to cout.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_list_8h}{List.\+h}\item 
+\hyperlink{_list_8cpp}{List.\+cpp}\end{DoxyCompactItemize}

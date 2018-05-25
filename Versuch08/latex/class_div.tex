@@ -1,0 +1,107 @@
+\hypertarget{class_div}{}\section{Div Class Reference}
+\label{class_div}\index{Div@{Div}}
+
+
+Division expression.  
+
+
+
+
+{\ttfamily \#include $<$div.\+h$>$}
+
+Inheritance diagram for Div\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_div}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_div_a09066be0ef1596f1f673fe7a072cdc2d}{Div} (\hyperlink{class_expression}{Expression} $\ast$lhs, \hyperlink{class_expression}{Expression} $\ast$rhs)
+\begin{DoxyCompactList}\small\item\em Constructor method for the \hyperlink{class_div}{Div} class. \end{DoxyCompactList}\item 
+\hyperlink{class_div_ad4e297304eb13dfd034c9e0459ecfc4d}{$\sim$\+Div} ()
+\begin{DoxyCompactList}\small\item\em Destructor method for the \hyperlink{class_div}{Div} class. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_div_a5b96e19e7cffdb205a9e56377be3652e}{evaluate} () const
+\begin{DoxyCompactList}\small\item\em Divides the expressions. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_div_acbcc6e3d0f3ccb5e74de28de8499cbbf}{print} () const
+\begin{DoxyCompactList}\small\item\em Prints out the product. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Division expression. 
+
+This Class serves as a representation of the \char`\"{}/\char`\"{} operation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_div_a09066be0ef1596f1f673fe7a072cdc2d}\label{class_div_a09066be0ef1596f1f673fe7a072cdc2d}} 
+\index{Div@{Div}!Div@{Div}}
+\index{Div@{Div}!Div@{Div}}
+\subsubsection{\texorpdfstring{Div()}{Div()}}
+{\footnotesize\ttfamily Div\+::\+Div (\begin{DoxyParamCaption}\item[{\hyperlink{class_expression}{Expression} $\ast$}]{lhs,  }\item[{\hyperlink{class_expression}{Expression} $\ast$}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Constructor method for the \hyperlink{class_div}{Div} class. 
+
+This constructor makes sure to initialize the left and right operands.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & left hand side \hyperlink{class_expression}{Expression} \\
+\hline
+{\em rhs} & right hand side \hyperlink{class_expression}{Expression} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_div_ad4e297304eb13dfd034c9e0459ecfc4d}\label{class_div_ad4e297304eb13dfd034c9e0459ecfc4d}} 
+\index{Div@{Div}!````~Div@{$\sim$\+Div}}
+\index{````~Div@{$\sim$\+Div}!Div@{Div}}
+\subsubsection{\texorpdfstring{$\sim$\+Div()}{~Div()}}
+{\footnotesize\ttfamily Div\+::$\sim$\+Div (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method for the \hyperlink{class_div}{Div} class. 
+
+This destructor deletes the expressions stored in the \hyperlink{class_div}{Div} Class and thus frees up the memory. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_div_a5b96e19e7cffdb205a9e56377be3652e}\label{class_div_a5b96e19e7cffdb205a9e56377be3652e}} 
+\index{Div@{Div}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Div@{Div}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily double Div\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Divides the expressions. 
+
+This function divides the left and the right expressions. They may be simple doubles or long expressions of the \hyperlink{class_expression}{Expression} datatype. This is why evaluation of both operands is needed before the division operation can be performed, as to make sure to complete all the previous operations first.
+
+\begin{DoxyReturn}{Returns}
+The quotient of the left and the right expressions 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a7437adfabeaeb0500d62d10c43a1f853}{Expression}.
+
+\mbox{\Hypertarget{class_div_acbcc6e3d0f3ccb5e74de28de8499cbbf}\label{class_div_acbcc6e3d0f3ccb5e74de28de8499cbbf}} 
+\index{Div@{Div}!print@{print}}
+\index{print@{print}!Div@{Div}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Div\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints out the product. 
+
+This functions outputs the multiplication operation performed in a human readable fashion with brackets and a \char`\"{}$\ast$\char`\"{} symbol. 
+
+Implements \hyperlink{class_expression_a6e05f883ebf77faf344dbaebfc82b3a0}{Expression}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{div_8h}{div.\+h}\item 
+\hyperlink{div_8cpp}{div.\+cpp}\end{DoxyCompactItemize}

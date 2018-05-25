@@ -1,0 +1,170 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Reversi\+\_\+\+K\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_aa6ee1a8b97b0f0538e668df592ae147e}\label{main_8cpp_aa6ee1a8b97b0f0538e668df592ae147e}} 
+\#define {\bfseries H\+U\+M\+AN}~1
+\item 
+\mbox{\Hypertarget{main_8cpp_a546b26edcaf4b57d489b3d1cc18841a9}\label{main_8cpp_a546b26edcaf4b57d489b3d1cc18841a9}} 
+\#define {\bfseries C\+O\+M\+P\+U\+T\+ER}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a89dd8754fb2cb1c6d007cd6c4b8de248}{initialize\+\_\+field} (int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]})
+\begin{DoxyCompactList}\small\item\em Function providing first initialization of a new field. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_aacdbfaa6045beffcf99b25f92f979b29}{show\+\_\+field} (const int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]})
+\begin{DoxyCompactList}\small\item\em Prints the playing field to the console. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_ad4e85a4813dd17886bcb1704ffa49bca}{winner} (const int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]})
+\begin{DoxyCompactList}\small\item\em Determines the winner of the game. \end{DoxyCompactList}\item 
+bool \hyperlink{main_8cpp_afbf34a9e8028eb4911abf42d6dee0dea}{turn\+\_\+valid} (const int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]}, const int player, const int pos\+\_\+x, const int pos\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Checks the coordinates for validilty of a new move. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a2495c6f2402435b226c6f06785e7d091}{execute\+\_\+turn} (int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]}, const int player, const int pos\+\_\+x, const int pos\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Executes players move. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_abc856bca74fb081e1a6703227217f64d}{possible\+\_\+turns} (const int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]}, const int player)
+\begin{DoxyCompactList}\small\item\em Counts the number of possible turns. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8cpp_aeffc62e7a3a7a5ff8ce5d25398cc9ec9}\label{main_8cpp_aeffc62e7a3a7a5ff8ce5d25398cc9ec9}} 
+bool {\bfseries human\+\_\+turn} (int field\mbox{[}S\+I\+Z\+E\+\_\+Y\mbox{]}\mbox{[}S\+I\+Z\+E\+\_\+X\mbox{]}, const int player)
+\item 
+\mbox{\Hypertarget{main_8cpp_ac5a6b12999970639ef8578cba3fb786f}\label{main_8cpp_ac5a6b12999970639ef8578cba3fb786f}} 
+void {\bfseries game} (const int player\+\_\+type\mbox{[}2\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides functions for the game Reversi 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a2495c6f2402435b226c6f06785e7d091}\label{main_8cpp_a2495c6f2402435b226c6f06785e7d091}} 
+\index{main.\+cpp@{main.\+cpp}!execute\+\_\+turn@{execute\+\_\+turn}}
+\index{execute\+\_\+turn@{execute\+\_\+turn}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{execute\+\_\+turn()}{execute\_turn()}}
+{\footnotesize\ttfamily void execute\+\_\+turn (\begin{DoxyParamCaption}\item[{int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]},  }\item[{const int}]{player,  }\item[{const int}]{pos\+\_\+x,  }\item[{const int}]{pos\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Executes players move. 
+
+This function gets the current state of the game field and the information about an execution of a turn. It behaves similar to the turn\+\_\+valid function in that it looks for the opponent stones in neighbouring fields on lines that are terminated by the player\textquotesingle{}s own stones. The loop is then run backwards to replace all the stones with player\textquotesingle{}s ones. This updated game field could then be read by any other function to play the game further.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The current state of the game field \\
+\hline
+{\em player} & Player who makes the move, 1 for P1, 2 for P2 \\
+\hline
+{\em pos\+\_\+x} & The X coordinate the player has selected \\
+\hline
+{\em pos\+\_\+y} & The Y coordinate the player has selected \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a89dd8754fb2cb1c6d007cd6c4b8de248}\label{main_8cpp_a89dd8754fb2cb1c6d007cd6c4b8de248}} 
+\index{main.\+cpp@{main.\+cpp}!initialize\+\_\+field@{initialize\+\_\+field}}
+\index{initialize\+\_\+field@{initialize\+\_\+field}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{initialize\+\_\+field()}{initialize\_field()}}
+{\footnotesize\ttfamily void initialize\+\_\+field (\begin{DoxyParamCaption}\item[{int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Function providing first initialization of a new field. 
+
+This function fills an existing field with zeros and creates the starting pattern.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The field which will be initialized \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_abc856bca74fb081e1a6703227217f64d}\label{main_8cpp_abc856bca74fb081e1a6703227217f64d}} 
+\index{main.\+cpp@{main.\+cpp}!possible\+\_\+turns@{possible\+\_\+turns}}
+\index{possible\+\_\+turns@{possible\+\_\+turns}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{possible\+\_\+turns()}{possible\_turns()}}
+{\footnotesize\ttfamily int possible\+\_\+turns (\begin{DoxyParamCaption}\item[{const int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]},  }\item[{const int}]{player }\end{DoxyParamCaption})}
+
+
+
+Counts the number of possible turns. 
+
+This function gets the current state of the game field and the player whose turn it is to make a move, then it calculates the total amount of possible moves that player could eventually make given the positions of the stones in the field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The current state of the game field \\
+\hline
+{\em player} & Player who is going to make the move, 1 for P1, 2 for P2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_aacdbfaa6045beffcf99b25f92f979b29}\label{main_8cpp_aacdbfaa6045beffcf99b25f92f979b29}} 
+\index{main.\+cpp@{main.\+cpp}!show\+\_\+field@{show\+\_\+field}}
+\index{show\+\_\+field@{show\+\_\+field}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{show\+\_\+field()}{show\_field()}}
+{\footnotesize\ttfamily void show\+\_\+field (\begin{DoxyParamCaption}\item[{const int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Prints the playing field to the console. 
+
+This function gets the current playing field as parameter (two dimensional array) with entries of 0 (field is empty), 1 (field belongs to player 1), 2 (field belongs to player 2). ~\newline
+The function prints the playing field, grid included, to the console. Crosses symbolize player 1 while circles symbolize player 2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The field which is going to be printed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_afbf34a9e8028eb4911abf42d6dee0dea}\label{main_8cpp_afbf34a9e8028eb4911abf42d6dee0dea}} 
+\index{main.\+cpp@{main.\+cpp}!turn\+\_\+valid@{turn\+\_\+valid}}
+\index{turn\+\_\+valid@{turn\+\_\+valid}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{turn\+\_\+valid()}{turn\_valid()}}
+{\footnotesize\ttfamily bool turn\+\_\+valid (\begin{DoxyParamCaption}\item[{const int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]},  }\item[{const int}]{player,  }\item[{const int}]{pos\+\_\+x,  }\item[{const int}]{pos\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Checks the coordinates for validilty of a new move. 
+
+This function gets the current state of the playing field together with the information on which player\textquotesingle{}s turn it is and which coordinates they have selected to put their stone on. Thereafter, those coordinates are checked if the field is valid for the given turn. This is implemented in a way that, first of all, the coordinates are checked whether or not they are occupied and then the neighbouring fields are iteratively gone through and checked for an opponent stone. In case an opponent stone is found, the whole row/column/diagonal in the direction of the found opponent stone is gone through, until a stone is found beloning to the player. IF A\+ND O\+N\+LY IF these two conditions are fulfilled the selected coordinates are flagged as valid and the function returns a positive result.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The current state of the game field \\
+\hline
+{\em player} & Player whose turn it is to make a move, 1 for P1, 2 for P2 \\
+\hline
+{\em pos\+\_\+x} & The X coordinate the player has selected \\
+\hline
+{\em pos\+\_\+y} & The Y coordinate the player has selected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if the turn is not valid, T\+R\+UE if the turn is valid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ad4e85a4813dd17886bcb1704ffa49bca}\label{main_8cpp_ad4e85a4813dd17886bcb1704ffa49bca}} 
+\index{main.\+cpp@{main.\+cpp}!winner@{winner}}
+\index{winner@{winner}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{winner()}{winner()}}
+{\footnotesize\ttfamily int winner (\begin{DoxyParamCaption}\item[{const int}]{field\mbox{[}\+S\+I\+Z\+E\+\_\+\+Y\mbox{]}\mbox{[}\+S\+I\+Z\+E\+\_\+\+X\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Determines the winner of the game. 
+
+This function goes through the playing field (two dimensional array) and checks the number of stones belonging to each player in order to determine the winner of the game. The numbers are then saved into seperate counter variables for player 1 and player 2 which are compared at the end. After the comparison the function returns 1 if the player 1 wins the game, 2 if the player 2 and 0 in case of a draw.
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The field to be checked in order to determine the winner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for Player 1, 2 for Player 2, 0 for the draw case 
+\end{DoxyReturn}
